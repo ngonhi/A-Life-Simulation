@@ -1,5 +1,5 @@
 
-public class Organism {
+public abstract class Organism {
 	// Fields
 	public int energy;
 	public int coopProb;
@@ -26,20 +26,12 @@ public class Organism {
 		energy--;
 	} // decrementEnergy
 	
-	public abstract String getType() {
-		
-	} // getType
+	public abstract String getType();		
 	
-	public abstract Organism reproduce() {
-		
-	} // reproduce
+	public abstract Organism reproduce();
 	
-	public abstract double getCooperationProbability() {
-		
-	} // getCooperationProbability
+	public abstract double getCooperationProbability();
 	
-	public abstract boolean cooperates() {
-		
-	} // cooperates
+	public abstract boolean cooperates();
 	
 } // class Organism

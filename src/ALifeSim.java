@@ -1,3 +1,4 @@
+import java.util.HashMap;
 import java.util.Map;
 
 public class ALifeSim {
@@ -7,7 +8,7 @@ public class ALifeSim {
 		int cooperators = Integer.parseInt(args[1]);
 		int defectors = Integer.parseInt(args[2]);
 		int partialCooperators = Integer.parseInt(args[3]);
-		Map<String, Integer> population = new Map<String, Integer>();
+		Map<String, Integer> population = new HashMap<String, Integer>();
 		population.put("Cooperators", cooperators);
 		population.put("Defectors", defectors);
 		population.put("Partial Cooperators", partialCooperators);
