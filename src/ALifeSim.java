@@ -8,11 +8,11 @@ public class ALifeSim {
 		int cooperators = Integer.parseInt(args[1]);
 		int defectors = Integer.parseInt(args[2]);
 		int partialCooperators = Integer.parseInt(args[3]);
-		Map<String, Integer> population = new HashMap<String, Integer>();
-		population.put("Cooperators", cooperators);
-		population.put("Defectors", defectors);
-		population.put("Partial Cooperators", partialCooperators);
-		Population pop = Population(population);
+		Map<String, Integer> counts= new HashMap<String, Integer>();
+		counts.put("Cooperators", cooperators);
+		counts.put("Defectors", defectors);
+		counts.put("Partial Cooperators", partialCooperators);
+		Population pop = new Population(counts);
 		
 		
 		// Report
