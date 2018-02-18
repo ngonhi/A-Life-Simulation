@@ -17,10 +17,9 @@ public class Defector extends Organism{
 	} //getType
 
 	public Organism reproduce() {
-		Organism offspring = new Defector();
 		this.decrementEnergy();
 
-		return offspring;
+		return new Defector();
 	} //reproduce
 
 	public double getCooperationProbability() {

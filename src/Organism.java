@@ -10,11 +10,7 @@ public abstract class Organism {
 
 	// Methods
 	public void update() {
-		if (energy > 10) {
-			this.reproduce();
-		} else {
-			this.incrementEnergy();
-		}
+		this.incrementEnergy();
 	} // update
 
 	public int getEnergy() {

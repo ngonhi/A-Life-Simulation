@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class PartialCooperator extends Organism{
 	// Fields
@@ -17,10 +18,9 @@ public class PartialCooperator extends Organism{
 	} //getType
 
 	public Organism reproduce() {
-		Organism offspring = new PartialCooperator();
 		this.decrementEnergy();
 		
-		return offspring;
+		return new PartialCooperator();
 	} //reproduce
 
 	public double getCooperationProbability() {
@@ -28,6 +28,6 @@ public class PartialCooperator extends Organism{
 	} //getCooperationProbability
 
 	public boolean cooperates() {
-		return false;
+		return (new Random().nextInt(100) < 50);
 	} //cooperates
 }
