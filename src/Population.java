@@ -30,8 +30,11 @@ public class Population {
 	// Methods
 	public void update() {
 
-		for (int i = 0; i < size; i++) {
-			Organism o = population.get(i);
+
+		Iterator<Organism> iter = population.iterator();
+		
+		while(it.hasNext()) {
+			Organism o = iter.next();
 			
 			// Update all organisms
 			o.update();
@@ -63,8 +66,10 @@ public class Population {
 	
 	public double calculateCooperationMean() {
 		double total = 0.0;
-		for (int i = 0; i < size; i++) {
-			total += population.get(i).getCooperationProbability();
+		Iterator<Organism> iter = population.iterator();
+		
+		while(iter.hasNext()) {
+			total += iter.next().getCooperationProbability();
 		}
 		return total/size;
 	} // calculateCooperationMean
@@ -74,12 +79,14 @@ public class Population {
 		int defector = 0;
 		int partialCooperator = 0;
 		
-		for (int i = 0; i < size; i++) {
-			if (population.get(i) instanceof Cooperator)
+		Iterator<Organism> iter = population.iterator();
+		
+		while(it.hasNext()) {
+			if (iter.next() instanceof Cooperator)
 				cooperator++;
-			else if (population.get(i) instanceof Defector)
+			else if (iter.next() instanceof Defector)
 				defector++;
-			else if (population.get(i) instanceof PartialCooperator)
+			else if (iter.next() instanceof PartialCooperator)
 				partialCooperator++;
 		}
 		
