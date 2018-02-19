@@ -10,16 +10,16 @@ public class ALifeSim {
 		counts.put("Cooperator", Integer.parseInt(args[1]));
 		counts.put("Defector", Integer.parseInt(args[2]));
 		counts.put("Partial Cooperator", Integer.parseInt(args[3]));
-		
+
 		// Repeats tick
 		Population pop = new Population(counts);
 		for (int i = 0; i < iterations; i++) {
 			pop.update();
 		}
-		
+
 		// Updates counts
 		counts = pop.getPopulationCounts();
-		
+
 		// Reports
 		System.out.println("After " + iterations + " ticks:");
 		System.out.println("Cooperators = " + counts.get("Cooperator"));
