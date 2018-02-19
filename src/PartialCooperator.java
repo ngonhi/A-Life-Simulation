@@ -1,4 +1,5 @@
 
+
 public class PartialCooperator extends Organism{
 	// Fields
 	private double cooperProb;
@@ -29,5 +30,5 @@ public class PartialCooperator extends Organism{
 	public boolean cooperates() {
 		return (rg.nextInt(100) < 50);
 	} //cooperates
-	
+
 } // class PartialCooperator
