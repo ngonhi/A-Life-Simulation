@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class PartialCooperator extends Organism{
 	// Fields
@@ -26,7 +27,7 @@ public class PartialCooperator extends Organism{
 	} //getCooperationProbability
 
 	// Organism of type PartialCooperator cooperates 50% of the time
-	public boolean cooperates() {
+	public boolean cooperates(Random rg) {
 		return (rg.nextInt(100) < 50);
 	} //cooperates
 	

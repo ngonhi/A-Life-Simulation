@@ -1,20 +1,26 @@
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 
 public class ALifeSim {
+	// longSeeds = {1, 2, 345663467, 8658, 9590000, 10, 24, 56, 24165120, 7456859}
+	private final static long longSeed = 7456859;
+	
 	// Main method
 	public static void main (String[] args) {
 		int iterations = Integer.parseInt(args[0]);
+		
 
 		Map<String, Integer> counts = new HashMap<>();
 		counts.put("Cooperator", Integer.parseInt(args[1]));
 		counts.put("Defector", Integer.parseInt(args[2]));
 		counts.put("Partial Cooperator", Integer.parseInt(args[3]));
 		
+		Random rg = new Random(longSeed);    
 		// Repeats tick
 		Population pop = new Population(counts);
 		for (int i = 0; i < iterations; i++) {
-			pop.update();
+			pop.update(rg);
 		}
 		
 		// Updates counts

@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.Random;
 
 public class Population {
+	
 	// Field
 	private ArrayList<Organism> population;
 	private int size;
@@ -34,22 +35,21 @@ public class Population {
 	 * 2. Check their cooperation
 	 * 3. Check their reproduction
 	 */
-	public void update() {
+	public void update(Random rg) {
 		// Iterating through all the organisms
 		for (int i = 0; i < size; i++){
 			Organism o = population.get(i);
-			o.rg = new Random();
 			
 			// Update all organisms
 			o.update();
 			
 			// Check cooperations
-			if (o.cooperates() && o.getEnergy() >= 1) {
+			if (o.cooperates(rg) && o.getEnergy() >= 1) {
 				o.decrementEnergy(); // Organism loses energy
 				for(int j = 0; j < 8; j++) { // 8 random organisms gain 1 energy point
-					Organism receiver = population.get(o.rg.nextInt(size));
+					Organism receiver = population.get(rg.nextInt(size));
 					while (receiver == o)
-						receiver = population.get(o.rg.nextInt(size));
+						receiver = population.get(rg.nextInt(size));
 					receiver.incrementEnergy();
 				} // for j
 			} // if
@@ -59,7 +59,7 @@ public class Population {
 				Organism offspring = o.reproduce();
 				
 				// Replaces a random organism in the population
-				int index = o.rg.nextInt(size);
+				int index = rg.nextInt(size);
 				population.remove(index);
 				population.add(index, offspring);
 			}

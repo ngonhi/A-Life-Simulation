@@ -1,3 +1,4 @@
+import java.util.Random;
 
 public class Defector extends Organism{
 	// Fields
@@ -25,7 +26,7 @@ public class Defector extends Organism{
 		return cooperProb;
 	} //getCooperationProbability
 
-	public boolean cooperates() {
+	public boolean cooperates(Random rg) {
 		return false;
 	} //cooperates
 	
