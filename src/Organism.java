@@ -4,7 +4,7 @@ public abstract class Organism {
 	// Fields
 	protected int energy;
 	protected Random rg;
-	
+
 	// Constructor
 	public Organism() {
 		energy = 0;
@@ -68,5 +68,5 @@ public abstract class Organism {
 	 * @return true if the organism cooperates, else false, boolean
 	 */
 	public abstract boolean cooperates();
-	
+
 } // class Organism
