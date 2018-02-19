@@ -45,7 +45,7 @@
 | Tick 8 | 10 | 0 | 0 | 1.0 |
 | Tick 9 | 5 | 5 | 0 | 0.5 |
 | Tick 10 | 10 | 0 | 0 | 1.0 |
-| Average |  |  |  |  | 
+| Average |  |  |  | 0.87 | 
 Report:
     We predict that after 10 ticks, the number of cooperators will increase from 9 to 10,
   and the number of defector will decrease from 1 to 0 because cooperators can grow rapidly using
@@ -73,7 +73,7 @@ Report:
 | Tick 8 | 2 | 4 | 4 | 0.4 |
 | Tick 9 | 1 | 7 | 2 | 0.2 |
 | Tick 10 | 1 | 4 | 5 | 0.35 |
-| Average |  |  |  |  | 
+| Average |  |  |  | 0.33 | 
 - Report: 
 Prediction: We predicted that the number of the defectors will be the most, because they have 
 the ability to enjoy energy points produced by cooperations without losing energy in 'update's.
@@ -89,8 +89,8 @@ reason maybe deal with randomness, few iterations and the little population over
 | -------- | --------- | -------- | ------------------ | ---------------- |
 | Before tick | 1 | 99 | 0 | X |
 | Predictions | 0 | 100| 0 | 0.0 |
-| Tick 1 | 1 | 99 | 0 | 0.01 |
-| Tick 2 | 1 | 99 | 0 | 0.01 |
+| Tick 1 | 0 | 100 | 0 | 0.0 |
+| Tick 2 | 0 | 100 | 0 | 0.0 |
 | Tick 3 | 0 | 100 | 0 | 0.0 |
 | Tick 4 | 0 | 100 | 0 | 0.0 |
 | Tick 5 | 0 | 100 | 0 | 0.0 |
@@ -118,17 +118,17 @@ reason maybe deal with randomness, few iterations and the little population over
 | -------- | --------- | -------- | ------------------ | ---------------- |
 | Before tick | 99 | 1 | 0 | X |
 | Predictions | 100 | 0 | 0 | 1.0 |
-| Tick 1 | 98 | 2 | 0 | 0.98 |
-| Tick 2 | 98 | 2 | 0 | 0.98 |
+| Tick 1 | 100 | 0 | 0 | 1.0 |
+| Tick 2 | 100 | 0 | 0 | 1.0 |
 | Tick 3 | 100 | 0 | 0 | 1.0 |
-| Tick 4 | 100 | 0 | 0 | 1.0 |
+| Tick 4 | 0 | 100 | 0 | 0.0 |
 | Tick 5 | 100 | 0 | 0 | 1.0 |
 | Tick 6 | 100 | 0 | 0 | 1.0 |
 | Tick 7 | 100 | 0 | 0 | 1.0 |
 | Tick 8 | 100 | 0 | 0 | 1.0 |
-| Tick 9 | 100 | 0 | 0 | 1.0 |
+| Tick 9 | 2 | 98 | 0 | 0.02 |
 | Tick 10 | 100 | 0 | 0 | 1.0 |
-| Average |  |  |  | 1.0 | 
+| Average |  |  |  | 0.802 | 
 - Report:
   We predict that after 100 ticks, the number of cooperators will increase from 99 to 100,
   and the number of defector will decrease from 1 to 0 because cooperators can grow rapidly using
@@ -141,17 +141,17 @@ reason maybe deal with randomness, few iterations and the little population over
 | -------- | --------- | -------- | ------------------ | ---------------- |
 | Before tick | 33 | 33 | 34 | X |
 | Predictions | 34 | 33 | 33 | 0.505 |
-| Tick 1 | 34 | 33 | 33 | 0.505 |
-| Tick 2 | 33 | 34 | 33 | 0.495|
-| Tick 3 | 0 | 100 | 0 | 0.0 |
-| Tick 4 | 0 | 98 | 2 | 0.01 |
-| Tick 5 | 0 | 99 | 1 | 0.005 |
-| Tick 6 | 0 | 91 | 9 | 0.045 |
-| Tick 7 | 0 | 98 | 2 | 0.01 |
-| Tick 8 | 0 | 99 | 1 | 0.005 |
-| Tick 9 | 0 | 94 | 6 | 0.03 |
-| Tick 10 | 0 | 100 | 0 | 0.0 |
-| Average |  |  |  | 0.013| 
+| Tick 1 | 0 | 99 | 1 | 0.005 |
+| Tick 2 | 1 | 99 | 0 | 0.01 |
+| Tick 3 | 0 | 95 | 5 | 0.025|
+| Tick 4 | 1 | 99 | 0 | 0.01 |
+| Tick 5 | 0 | 71 | 29 | 0.145 |
+| Tick 6 | 0 | 99 | 1 | 0.005 |
+| Tick 7 | 0 | 97 | 3 | 0.015 |
+| Tick 8 | 1 | 95 | 4 | 0.03 |
+| Tick 9 | 0 | 100 | 0 | 0.0 |
+| Tick 10 | 0 | 95 | 5 | 0.025 |
+| Average |  |  |  | 0.027 | 
 - Report:
 Prediction: We predicted that the number of the defectors will be the most, because they have 
 the ability to enjoy energy points produced by cooperations without losing energy in 'update's.
