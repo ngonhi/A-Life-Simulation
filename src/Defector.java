@@ -29,5 +29,5 @@ public class Defector extends Organism{
 	public boolean cooperates(Random rg) {
 		return false;
 	} //cooperates
-	
+
 } // class Defector

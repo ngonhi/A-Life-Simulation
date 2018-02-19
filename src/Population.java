@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Random;
 
 public class Population {
-	
+
 	// Field
 	private ArrayList<Organism> population;
 	private int size;
@@ -40,12 +40,7 @@ public class Population {
 		// Iterating through all the organisms
 		for (int i = 0; i < size; i++){
 			Organism o = population.get(i);
-<<<<<<< HEAD
-			
-=======
-			o.rg = new Random();
 
->>>>>>> 5d17d8927b6c78373298426b83617bd04a4808ba
 			// Update all organisms
 			o.update();
 

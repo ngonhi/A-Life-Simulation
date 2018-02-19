@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import java.util.Random;
 
-=======
->>>>>>> 5d17d8927b6c78373298426b83617bd04a4808ba
 public class Cooperator extends Organism{
 	// Fields
 	private double cooperProb;
@@ -28,13 +25,8 @@ public class Cooperator extends Organism{
 	public double getCooperationProbability() {
 		return cooperProb;
 	} //getCooperationProbability
-<<<<<<< HEAD
-	
-	public boolean cooperates(Random rg) {
-=======
 
-	public boolean cooperates() {
->>>>>>> 5d17d8927b6c78373298426b83617bd04a4808ba
+	public boolean cooperates(Random rg) {
 		return true;
 	} //cooperates
 

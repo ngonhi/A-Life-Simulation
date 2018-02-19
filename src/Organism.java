@@ -3,12 +3,7 @@ import java.util.Random;
 public abstract class Organism {
 	// Fields
 	protected int energy;
-<<<<<<< HEAD
-	
-=======
-	protected Random rg;
 
->>>>>>> 5d17d8927b6c78373298426b83617bd04a4808ba
 	// Constructor
 	public Organism() {
 		energy = 0;
@@ -71,11 +66,5 @@ public abstract class Organism {
 	 * Returns whether or not the organism cooperates.
 	 * @return true if the organism cooperates, else false, boolean
 	 */
-<<<<<<< HEAD
 	public abstract boolean cooperates(Random rg);
-	
-=======
-	public abstract boolean cooperates();
-
->>>>>>> 5d17d8927b6c78373298426b83617bd04a4808ba
 } // class Organism
