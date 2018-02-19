@@ -17,8 +17,7 @@ public class Defector extends Organism{
 	} //getType
 
 	public Organism reproduce() {
-		this.decrementEnergy();
-
+		this.energy -= 10;
 		return new Defector();
 	} //reproduce
 
@@ -29,4 +28,5 @@ public class Defector extends Organism{
 	public boolean cooperates() {
 		return false;
 	} //cooperates
-}
+	
+} // class Defector

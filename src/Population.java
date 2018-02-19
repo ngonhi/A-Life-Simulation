@@ -28,65 +28,73 @@ public class Population {
 	}
 	
 	// Methods
+	/** 
+	 * Loops through all organisms to
+	 * 1. Update them
+	 * 2. Check their cooperation
+	 * 3. Check their reproduction
+	 */
 	public void update() {
-
-
-		Iterator<Organism> iter = population.iterator();
-		
-		while(it.hasNext()) {
-			Organism o = iter.next();
+		// Iterating through all the organisms
+		for (int i = 0; i < size; i++){
+			Organism o = population.get(i);
+			o.rg = new Random();
 			
 			// Update all organisms
 			o.update();
 			
 			// Check cooperations
 			if (o.cooperates() && o.getEnergy() >= 1) {
-				o.decrementEnergy();
-				for(int j = 0; j < 8; j++) {
-					Organism receiver = population.get(new Random().nextInt(size));
+				o.decrementEnergy(); // Organism loses energy
+				for(int j = 0; j < 8; j++) { // 8 random organisms gain 1 energy point
+					Organism receiver = population.get(o.rg.nextInt(size));
 					while (receiver == o)
-						receiver = population.get(new Random().nextInt(size));
+						receiver = population.get(o.rg.nextInt(size));
 					receiver.incrementEnergy();
 				} // for j
 			} // if
 			
-			// Reproduce
+			// Reproduction
 			if (o.getEnergy() >= 10) {
 				Organism offspring = o.reproduce();
 				
-				// Replace a random organism in the population
-				int index = new Random().nextInt(size);
+				// Replaces a random organism in the population
+				int index = o.rg.nextInt(size);
 				population.remove(index);
-				population.add(index,  offspring);
-				
-				o.energy -= 10;
+				population.add(index, offspring);
 			}
 		} // for i	
 	} // update
 	
+	/**
+	 * Calculates the mean cooperation probability of all the organisms in the population
+	 * @return double
+	 */
 	public double calculateCooperationMean() {
 		double total = 0.0;
-		Iterator<Organism> iter = population.iterator();
-		
-		while(iter.hasNext()) {
-			total += iter.next().getCooperationProbability();
+
+		for (int i = 0; i < size; i++) {
+			total += population.get(i).getCooperationProbability();
 		}
 		return total/size;
 	} // calculateCooperationMean
 	
+	/**
+	 * Returns the counts of all the organisms in the population
+	 * @return counts, Map<String, Integer>
+	 */
 	public Map<String, Integer> getPopulationCounts() {
 		int cooperator = 0;
 		int defector = 0;
 		int partialCooperator = 0;
 		
-		Iterator<Organism> iter = population.iterator();
-		
-		while(it.hasNext()) {
-			if (iter.next() instanceof Cooperator)
+		// Calculating the number of organisms of each type
+		for (int i = 0; i < size; i++) {
+			if (population.get(i) instanceof Cooperator)
 				cooperator++;
-			else if (iter.next() instanceof Defector)
+			else if (population.get(i) instanceof Defector)
 				defector++;
-			else if (iter.next() instanceof PartialCooperator)
+			else if (population.get(i) instanceof PartialCooperator)
 				partialCooperator++;
 		}
 		
@@ -97,4 +105,5 @@ public class Population {
 		
 		return counts;
 	} // getPopulationCounts
+	
 } // class Population

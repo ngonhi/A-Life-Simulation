@@ -17,8 +17,7 @@ public class Cooperator extends Organism{
 	} //getType
 	
 	public Organism reproduce() {
-		this.decrementEnergy();
-		
+		this.energy -= 10;
 		return new Cooperator();
 	} //reproduce
 	
@@ -30,4 +29,4 @@ public class Cooperator extends Organism{
 		return true;
 	} //cooperates
 	
-}
+} // class Cooperator
