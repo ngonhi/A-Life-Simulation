@@ -1,5 +1,6 @@
 import java.util.Random;
 
+
 public class PartialCooperator extends Organism{
 	// Fields
 	private double cooperProb;
@@ -30,5 +31,5 @@ public class PartialCooperator extends Organism{
 	public boolean cooperates(Random rg) {
 		return (rg.nextInt(100) < 50);
 	} //cooperates
-	
+
 } // class PartialCooperator
