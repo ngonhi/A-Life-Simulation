@@ -17,7 +17,7 @@
 | Run 9 | 0 | 10 | 0 | 0.0 |
 | Run 10 | 0 | 10 | 0 | 0.0 |
 | Average |  |  |  | 0.03 | 
- Report:
+ #### Report:
 
    - We predict that after 10 ticks, the number of cooperator will reduce from 1 to 0,
   and the number of defectors will increase from 9 to 10 because cooperators and defectors
@@ -48,7 +48,7 @@
 | Average |  |  |  | 0.87 | 
 #### Report:
 
-    - We predict that after 10 ticks, the number of cooperators will increase from 9 to 10,
+  - We predict that after 10 ticks, the number of cooperators will increase from 9 to 10,
   and the number of defector will decrease from 1 to 0 because cooperators can grow rapidly using
   the energy given by the other cooperator although they also lose 1 energy point when cooperating,
   and when they reach 10 energy points, they will have higher a chance to reproduce the new Cooperators 
