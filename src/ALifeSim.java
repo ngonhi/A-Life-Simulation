@@ -10,7 +10,6 @@ public class ALifeSim {
 	public static void main (String[] args) {
 		int iterations = Integer.parseInt(args[0]);
 
-
 		Map<String, Integer> counts = new HashMap<>();
 		counts.put("Cooperator", Integer.parseInt(args[1]));
 		counts.put("Defector", Integer.parseInt(args[2]));
