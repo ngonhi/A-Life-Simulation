@@ -53,8 +53,8 @@
   the energy given by the other cooperator although they also lose 1 energy point when cooperating,
   and when they reach 10 energy points, they will have higher a chance to reproduce the new Cooperators 
   and then replace the only one defector, causing the defector to become 0 forever.
-    - The means of cooperation probability are indicated in the above table. 
-    - The results of 10 experiments partially support our prediction. There are cases when the single defectors
+  - The means of cooperation probability are indicated in the above table. 
+  - The results of 10 experiments partially support our prediction. There are cases when the single defectors
   gained a lot of energy given by the 9 cooperators through 'update' method and thus grew faster
   while cooperators lost energy through cooperating besides gaining energy through 'update'. 
   Therefore the number of defectors can occasionally be more than 0.
