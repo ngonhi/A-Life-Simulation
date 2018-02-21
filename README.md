@@ -5,12 +5,12 @@ Authors: Xinya Yang and Nhi Ngo
 This program will simulate the cooperation between the organisms of bacteria. 
 Submitted files include 
 - src: 
-ALifeSim.java
-Organism.java
-Cooperator.java
-Defector.java
-PartialCooperator.java
-Population.java
+  - ALifeSim.java
+  - Organism.java
+  - Cooperator.java
+  - Defector.java
+  - PartialCooperator.java
+  - Population.java
 - README.md
 - Report.md (Experiment Report)
 
